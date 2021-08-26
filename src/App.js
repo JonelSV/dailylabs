@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Receipt from './Receipt';
+import './App.css';
 
 const receipt1 =
   {
@@ -59,9 +60,17 @@ class App extends Component {
     return (
       <div>
         
-
-        <Receipt receipt1={this.state.receipt1}/>
-        
+          <div className="container">
+            <div className="holder">
+              <Receipt receipt={this.state.receipt1}/>
+            </div>
+            <div className="holder">
+              <Receipt receipt={this.state.receipt2}/>
+            </div>
+            <div className="holder">
+              <Receipt receipt={this.state.receipt3}/>
+            </div>
+          </div>  
       </div>
     );
   }
